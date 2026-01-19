@@ -2,12 +2,6 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QLineEdit
 from PyQt5.QtCore import Qt
 
-# app = QApplication(sys.argv)
-# window = QWidget()
-# window.setWindowTitle('Simple PyQt5 App')
-# window.setGeometry(100, 100, 300, 200)
-# window.show()
-# sys.exit(app.exec_())
 def solve_expression(expr):
     try:
         result = eval(expr)
@@ -107,3 +101,4 @@ if __name__ == '__main__':
     sys.exit(app.exec_())
 
     
+
