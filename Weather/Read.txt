@@ -1,0 +1,5 @@
+Install PyQT5
+python -m pip install PyQt5
+and
+Requests
+python -m pip install requests
