@@ -85,7 +85,8 @@ class PetInfoAPP(QWidget):
             if not result:
                 cursor.execute("INSERT OR IGNORE INTO animals (species, Food, Type, Lifespan) VALUES (?, '', '', 0)", (animal_type,))
                 connection.commit()
-                result =cursor.execute("SELECT id FROM animals WHERE species=?", (animal_type,))
+                cursor.execute("SELECT id FROM animals WHERE species=?", (animal_type,))
+                result = cursor.fetchone()
             animal_id = result[0]
             cursor.execute(
                 """INSERT OR IGNORE INTO pets (Name, Age, Owner, AnimalID)
@@ -131,5 +132,6 @@ if __name__ == '__main__':
     ex = PetInfoAPP()
     ex.show()
     sys.exit(app.exec_())
+
 
 
